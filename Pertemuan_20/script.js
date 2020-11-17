@@ -44,4 +44,22 @@
 let berat=prompt ("Masukan berat :") ;
 let tinggi=prompt ("Masukan tinggi :");
 let bmi=berat/(tinggi*tinggi);
-console.log("BMI =" + bmi );
+classification();
+function classification(){
+    if (bmi < 18.5){
+        console.log("BMI = "+ bmi + ". Your in underweight classification");
+    }else if (bmi > 18.5 && bmi < 24.9){
+        console.log("BMI = "+ bmi + ". Your in normal range classification");
+    }else if (bmi > 25.0 && bmi < 29.9){
+        console.log("BMI = "+ bmi + ". Your in overweight (preobese) classification");
+    }else if (bmi >= 30){
+        console.log("BMI = "+ bmi + ". Your in obese classification");
+    }else if (bmi > 30.0 && bmi < 34.9){
+        console.log("BMI = "+ bmi + ". Your in class I classification");
+    }else if (bmi > 35.0 && bmi < 39.9){
+        console.log("BMI = "+ bmi + ". Your in class II classification");
+    }else if (bmi >= 40.0){
+        console.log("BMI = "+ bmi + ". Your in class III classification");
+    }
+}
+
